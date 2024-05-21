@@ -14,4 +14,4 @@ def solution(x_success: int,
     test = sps.norm(loc=mean_test).rvs(1000)
     control = sps.norm(loc=mean_control).rvs(1000)
     pvalue = sps.ttest_ind(test, control, alternative='less').pvalue
-    return pvalue > alpha
+    return pvalue < alpha
